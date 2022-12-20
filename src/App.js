@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+function Header (props) {
+  const {numberOfProducts} = props;
+  console.log(props, numberOfProducts);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <header> This is my  header number of products {props.numberOfProducts}</header>
+  );
+}
+
+function Product ({product}) {
+  return(
+    <div key= {product.id} >
+      {product.id}
+      {product.price}
     </div>
   );
 }
 
-export default App;
+function Store() {
+  const products = [
+    {
+      id:1,
+      name:'Mani',
+      prince:'$1US'
+    }
+  ];
+  return(
+    <main>
+      {products.map((product) => (
+        <Product product= {product} /> 
+        ))}
+    </main>
+  );
+}
+
+export default function App() {
+  const numberOfProducts = 0;
+  return(
+    <div>
+      <Header> numberOfProducts={numberOfProducts}</Header>
+      <h1>Hello CoderHouse {numberOfProducts}</h1>
+      <Store />
+    </div>
+  )
+}
