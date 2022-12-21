@@ -1,15 +1,23 @@
-ader{
-    display: flexbox;
-    flex-direction: column;
-}
-
-.companyName{
+.trolley{
     display: flex;
-    flex-direction: column;
-    font-weight: bold;
-    color: blue;
-    font-size: 30px;
     align-items: center;
-    padding: 20px;
 }
 
+.icon{
+    display: flex;
+    position: relative;
+    height: 50px;
+}
+
+.number{
+    display: flex;
+    position: absolute;
+    margin-right: 20px;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    color: white;
+}
