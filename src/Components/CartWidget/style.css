@@ -1,0 +1,15 @@
+ader{
+    display: flexbox;
+    flex-direction: column;
+}
+
+.companyName{
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    color: blue;
+    font-size: 30px;
+    align-items: center;
+    padding: 20px;
+}
+
